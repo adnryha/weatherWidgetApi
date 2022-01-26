@@ -1,7 +1,7 @@
-let cityName = prompt('Введіть місто (Львів, Київ...)');
-console.log(cityName);
+// let cityName = prompt('Введіть місто (Львів, Київ...)');
+// console.log(cityName);
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=16b6754ad8952f29340c4a77785bfb10&lang=uk`)
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=16b6754ad8952f29340c4a77785bfb10&lang=uk`)
   .then(function (resp) { return resp.json() })
   .then(function (data) {
     document.querySelector('.package-name').innerHTML = data.name;
